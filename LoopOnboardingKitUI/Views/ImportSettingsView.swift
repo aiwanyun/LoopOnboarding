@@ -25,7 +25,7 @@ struct ImportSettingsView: View {
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
-            Text(LocalizedString("Settings Found", comment: "Title on ImportSettingsView"))
+            Text(LocalizedString("找到设置", comment: "Title on ImportSettingsView"))
                 .font(.largeTitle)
                 .fontWeight(.semibold)
             Text(String(format: LocalizedString("We've detected Loop settings stored in your Nightscout! They were last updated %1$@. Would you like to import them?\n\nAfter importing, you will still need to review the imported settings in the following screens and verify that they are correct.", comment: "Format string for main guidance text on ImportSettingsView (1: age of settings)"), settingsAgeFormatter.localizedString(fromTimeInterval: settingsDate.timeIntervalSinceNow)))
@@ -35,13 +35,13 @@ struct ImportSettingsView: View {
             Button(action: {
                 self.didFinish?(true)
             }) {
-                Text(LocalizedString("Import Saved Settings", comment:"Button title for choosing to import settings from nightscout"))
+                Text(LocalizedString("导入保存的设置", comment:"Button title for choosing to import settings from nightscout"))
                     .actionButtonStyle(.primary)
             }
             Button(action: {
                 self.didFinish?(false)
             }) {
-                Text(LocalizedString("Do Not Import Settings", comment:"Button title for skipping setting import from nightscout"))
+                Text(LocalizedString("不要导入设置", comment:"Button title for skipping setting import from nightscout"))
                     .actionButtonStyle(.secondary)
             }
         }

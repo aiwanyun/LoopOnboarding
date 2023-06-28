@@ -212,7 +212,7 @@ class OnboardingUICoordinator: UINavigationController, CGMManagerOnboarding, Pum
             return hostingController(rootView: view)
         case .therapySettingsRecap:
             therapySettingsViewModel?.prescription = nil
-            let nextButtonString = LocalizedString("Save Settings", comment: "Therapy settings save button title")
+            let nextButtonString = LocalizedString("保存设置", comment: "Therapy settings save button title")
             let actionButton = TherapySettingsView.ActionButton(localizedString: nextButtonString) { [weak self] in
                 if let self = self {
                     self.onboarding.therapySettings = self.therapySettingsViewModel?.therapySettings

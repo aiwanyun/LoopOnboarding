@@ -16,7 +16,7 @@ struct WelcomeView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Spacer()
-            Text(LocalizedString("Welcome to Loop", comment: "Title on WelcomeView"))
+            Text(LocalizedString("欢迎来到循环", comment: "Title on WelcomeView"))
                 .font(.largeTitle)
                 .fontWeight(.semibold)
             Image(frameworkImage: "Loop", decorative: true)
@@ -30,7 +30,7 @@ struct WelcomeView: View {
             Button(action: {
                 self.didContinue?()
             }) {
-                Text(LocalizedString("Let's Go!", comment:"Button title for starting setup"))
+                Text(LocalizedString("我们走吧！", comment:"Button title for starting setup"))
                     .actionButtonStyle(.primary)
             }
         }

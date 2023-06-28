@@ -18,7 +18,7 @@ struct AppleHealthAuthView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 20) {
-                Text(LocalizedString("Apple Health", comment: "Title on AppleHealthAuthView"))
+                Text(LocalizedString("苹果健康", comment: "Title on AppleHealthAuthView"))
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 Image(frameworkImage: "AppleHealthLogo", decorative: true)
@@ -35,7 +35,7 @@ struct AppleHealthAuthView: View {
                         processing = false
                     }
                 }) {
-                    Text(LocalizedString("Share With Apple Health", comment:"Button title for starting apple health permissions request"))
+                    Text(LocalizedString("与Apple Health共享", comment:"Button title for starting apple health permissions request"))
                         .actionButtonStyle(.primary)
                 }.disabled(processing == true)
             }
