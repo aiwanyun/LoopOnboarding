@@ -28,7 +28,7 @@ struct ImportSettingsView: View {
             Text(LocalizedString("找到设置", comment: "Title on ImportSettingsView"))
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-            Text(String(format: LocalizedString("We've detected Loop settings stored in your Nightscout! They were last updated %1$@. Would you like to import them?\n\nAfter importing, you will still need to review the imported settings in the following screens and verify that they are correct.", comment: "Format string for main guidance text on ImportSettingsView (1: age of settings)"), settingsAgeFormatter.localizedString(fromTimeInterval: settingsDate.timeIntervalSinceNow)))
+            Text(String(format: LocalizedString("我们检测到您的 Nightscout 中存储了循环设置！ 它们的最后更新时间是%1$@。 您想导入它们吗？\n\n导入后，您仍需要在以下屏幕中检查导入的设置并验证它们是否正确。", comment: "Format string for main guidance text on ImportSettingsView (1: age of settings)"), settingsAgeFormatter.localizedString(fromTimeInterval: settingsDate.timeIntervalSinceNow)))
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(.secondary)
             Spacer()
