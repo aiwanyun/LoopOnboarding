@@ -25,13 +25,13 @@ struct OnboardingChooserView: View {
             Button(action: {
                 self.setupWithNightscout?()
             }) {
-                Text(LocalizedString("将NightScout与循环使用", comment:"Button title for choosing onboarding with nightscout"))
+                Text(LocalizedString("使用 Nightscout 远程监视 Loop", comment:"Button title for choosing onboarding with nightscout"))
                     .actionButtonStyle(.secondary)
             }
             Button(action: {
                 self.setupWithoutNightscout?()
             }) {
-                Text(LocalizedString("设置循环无晚上", comment:"Button title for choosing onboarding without nightscout"))
+                Text(LocalizedString("暂时不使用 Nightscout", comment:"Button title for choosing onboarding without nightscout"))
                     .actionButtonStyle(.secondary)
             }
         }
