@@ -18,20 +18,20 @@ struct OnboardingChooserView: View {
             Text(LocalizedString("Nightscout", comment: "Title on OnboardingChooserView"))
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-            Text(LocalizedString("Loop可以与NightScout合作，为远程护理人员提供一种查看循环在做什么的方法。 NightScout的使用是完全可选的循环，您可以随时将其设置。", comment: "Descriptive text on OnboardingChooserView"))
+            Text(LocalizedString("Loop可以与NightScout合作，为远程护理人员提供一种查看闭环在做什么的方法。 NightScout的使用是完全可选的闭环，您可以随时将其设置。", comment: "Descriptive text on OnboardingChooserView"))
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(.secondary)
             Spacer()
             Button(action: {
                 self.setupWithNightscout?()
             }) {
-                Text(LocalizedString("使用 Nightscout 远程监视 Loop", comment:"Button title for choosing onboarding with nightscout"))
+                Text(LocalizedString("将NightScout与闭环使用", comment:"Button title for choosing onboarding with nightscout"))
                     .actionButtonStyle(.secondary)
             }
             Button(action: {
                 self.setupWithoutNightscout?()
             }) {
-                Text(LocalizedString("暂时不使用 Nightscout", comment:"Button title for choosing onboarding without nightscout"))
+                Text(LocalizedString("设置闭环但没有Nightscout", comment:"Button title for choosing onboarding without nightscout"))
                     .actionButtonStyle(.secondary)
             }
         }

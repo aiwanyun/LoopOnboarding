@@ -84,7 +84,7 @@ class OnboardingUICoordinator: UINavigationController, CGMManagerOnboarding, Pum
         self.initialTherapySettings = initialTherapySettings
         self.displayGlucosePreference = displayGlucosePreference
         self.colorPalette = colorPalette
-        self.service = onboardingProvider.activeServices.first(where: { $0.serviceIdentifier == OnboardingUICoordinator.serviceIdentifier })
+        self.service = onboardingProvider.activeServices.first(where: { $0.pluginIdentifier == OnboardingUICoordinator.serviceIdentifier })
 
         super.init(navigationBarClass: UINavigationBar.self, toolbarClass: UIToolbar.self)
     }
@@ -225,11 +225,11 @@ class OnboardingUICoordinator: UINavigationController, CGMManagerOnboarding, Pum
         }
     }
 
-    private func hostingController<Content: View>(rootView: Content) -> DismissibleHostingController {
+    private func hostingController<Content: View>(rootView: Content) -> DismissibleHostingController<some View> {
         let rootView = rootView
             .environmentObject(displayGlucosePreference)
             .environment(\.appName, Bundle.main.bundleDisplayName)
-        let hostingController = DismissibleHostingController(rootView: rootView, colorPalette: colorPalette)
+        let hostingController = DismissibleHostingController(content: rootView, colorPalette: colorPalette)
         return hostingController
     }
 

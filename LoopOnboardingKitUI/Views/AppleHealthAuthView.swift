@@ -25,7 +25,7 @@ struct AppleHealthAuthView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
-                Text(LocalizedString("Apple Health 可用于存储 Loop 中的血糖、胰岛素和碳水化合物数据。\n\n如果您授予 Loop 权限，Loop 还可以从支持 Apple Health 的血糖仪和胰岛素笔读取血糖和胰岛素数据", comment: "Onboarding, Apple Health Permissions intro paragraph"))
+                Text(LocalizedString("Apple Health can be used to store blood glucose, insulin and carbohydrate data from Loop.\n\nIf you give Loop permission, Loop can also read glucose and insulin data from glucometers and insulin pens that support Apple Health", comment: "Onboarding, Apple Health Permissions intro paragraph"))
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(.secondary)
                 Spacer()
